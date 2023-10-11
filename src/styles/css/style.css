@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Указываем box sizing */
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap&subset=cyrillic-ext");
 *,
 *::before,
 *::after {
@@ -70,4 +71,8 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=style.css.map */
