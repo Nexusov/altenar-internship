@@ -122,6 +122,7 @@ select {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(0, 0, 0, 0.54);
+  font-weight: 500;
   cursor: pointer;
 }
 .social-list__item.active {
