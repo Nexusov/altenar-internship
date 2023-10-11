@@ -1,0 +1,39 @@
+.header {
+  width: 100vw;
+  background: $secondaryPageColor;
+  overflow: auto; // remove collapsing margins
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px $marginGeneral 0 $marginGeneral;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  } 
+}
+
+.social-list {
+  display: flex;
+  text-transform: uppercase;
+
+  &__item {
+    width: 164px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $textSecondary;
+    cursor: pointer;
+
+    &.active {
+      color: $textActive;
+
+      border-bottom: 2px solid $buttonColor;
+    }
+  }
+}
