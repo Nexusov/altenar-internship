@@ -1,5 +1,5 @@
 .header {
-  width: 100vw;
+  /* width: 100vw; */ // width issue
   background: $secondaryPageColor;
   overflow: auto; // remove collapsing margins
   
@@ -15,26 +15,25 @@
     gap: 12px;
     margin-bottom: 32px;
   } 
-}
 
-.social-list {
-  display: flex;
-  text-transform: uppercase;
-  
-  &__item {
-    width: 164px;
-    height: 48px;
+  &__social-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $textSecondary;
-    font-weight: 500;
-    cursor: pointer;
-
-    &.active {
-      color: $textActive;
-
-      border-bottom: 2px solid $buttonColor;
+    text-transform: uppercase;
+    
+    &__item {
+      width: 164px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $textSecondary;
+      font-weight: 500;
+      cursor: pointer;
+  
+      &--active {
+        color: $textActive;
+        border-bottom: 2px solid $primary;
+      }
     }
   }
 }
