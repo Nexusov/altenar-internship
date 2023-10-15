@@ -400,4 +400,8 @@ input[id^=dropdown-menu-]:checked + .dropdown-menu-label svg path {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.15px;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
