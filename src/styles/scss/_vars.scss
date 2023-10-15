@@ -4,13 +4,32 @@ $primaryPageColor: #FFF;
 $secondaryPageColor: rgba(0, 0, 0, 0.04);
 
 $textPrimary: #000;
-$textSecondary: rgba(0, 0, 0, 0.54);
+$textSecondary: rgba(0, 0, 0, 0.38);
+$textSubtitile: rgba(0, 0, 0, 0.54);
 $textActive: $primary;
 
 $marginGeneral: 180px;
+
+$postColumnWidth: 60%;
+$publishedColumnWidth: 20%;
+$linkColumnWidth: 20%;
 
 $paddingButton: 8px 22px;
 
 $buttonColor: $primary;
 $buttonColorHover: #0B79D0;
-$buttonFontColor: #FFFFFF
+$buttonFontColor: #FFFFFF;
+
+$iconHover: rgba(33, 150, 243, 0.04);
+$iconActive: rgba(33, 150, 243, 0.24);
+
+$disabledControl: $textSubtitile;
+$disabledButtonBG:rgba(0, 0, 0, 0.12);
+$disabledButtonText: rgba(0, 0, 0, 0.26);
+$disabledButtonIcon: $disabledButtonText;
+
+$dropDownItemHover: #F5F5F5;
+
+$statusSuccess: #4CAF50;
+$statusWarning: #FF9800;
+$statusError: #F44336;
