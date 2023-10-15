@@ -1,6 +1,7 @@
 .header {
   /* width: 100vw; */ // width issue
   background: $secondaryPageColor;
+  margin-bottom: 24px;
   overflow: auto; // remove collapsing margins
   
   &__content {
@@ -26,7 +27,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $textSecondary;
+      color: $textSubtitile;
       font-weight: 500;
       cursor: pointer;
   
