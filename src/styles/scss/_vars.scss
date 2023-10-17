@@ -1,18 +1,19 @@
 $primary: #2196F3;
 
 $primaryPageColor: #FFF;
-$secondaryPageColor: rgba(0, 0, 0, 0.04);
+$secondaryPageColor: rgb(235 235 235);
 
 $textPrimary: #000;
 $textSecondary: rgba(0, 0, 0, 0.38);
 $textSubtitile: rgba(0, 0, 0, 0.54);
 $textActive: $primary;
+$textNavigation: rgba(0, 0, 0, 0.54);
 
 $marginGeneral: 180px;
 
-$postColumnWidth: 60%;
-$publishedColumnWidth: 20%;
-$linkColumnWidth: 20%;
+$postColumnWidth: 64.77%;
+$publishedColumnWidth: 27.85%;
+$linkColumnWidth: 7.38%;
 
 $paddingButton: 8px 22px;
 
@@ -33,3 +34,10 @@ $dropDownItemHover: #F5F5F5;
 $statusSuccess: #4CAF50;
 $statusWarning: #FF9800;
 $statusError: #F44336;
+
+$inputBorderColor: rgba(224, 224, 224, 1);
+$placeholderColor: rgba(0, 0, 0, 0.54);
+
+$dividerColor: $inputBorderColor;
+
+$dragdropBorder: rgba(0, 0, 0, 0.38);

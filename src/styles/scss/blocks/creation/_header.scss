@@ -1,0 +1,17 @@
+.header {
+  background: $secondaryPageColor;
+  &__nav {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    margin-left: $marginGeneral;
+  }
+}
+
+.header-nav {
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
