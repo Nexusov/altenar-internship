@@ -219,6 +219,13 @@ select {
   line-height: 26px;
   letter-spacing: 0.3px;
 }
+.btn[disabled] {
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.26);
+}
+.btn[disabled] .btn_icon svg path {
+  fill: rgb(166, 166, 166);
+}
 
 .text {
   font-weight: 400;
@@ -542,6 +549,14 @@ input:focus, textarea:focus {
   height: 133px;
   padding-top: 18.5px;
 }
+.inputs-container__error-msg {
+  color: #F44336;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+}
 
 .input-counter {
   position: relative;
@@ -574,6 +589,14 @@ input:focus, textarea:focus {
   margin-top: -7px;
 }
 
+.input-counter--error .input--error {
+  margin-bottom: 0;
+  border-color: #F44336;
+}
+.input-counter--error::after {
+  margin-top: 0;
+}
+
 .drag-drop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,9 +610,64 @@ input:focus, textarea:focus {
           justify-content: center;
   width: 100%;
   position: relative;
+  border-radius: 4px;
   border: 1px dashed rgba(0, 0, 0, 0.38);
   padding: 35px 0;
   gap: 16px;
+}
+.drag-drop__close-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.drag-drop--active {
+  background: #F5F5F5;
+  border-color: #2196F3;
+}
+.drag-drop--error {
+  border-color: #F44336;
+}
+.drag-drop__error-msg {
+  padding: 4px 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: -23px;
+  border-radius: 4px;
+  color: #621B16;
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  background: #FEECEB;
+}
+.drag-drop--loading {
+  border: 1px solid #E0E0E0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 4px solid #E5E5E5;
+}
+.drag-drop--loading::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -1px;
+  height: 4px;
+  width: 22.84%;
+  border-radius: 25px;
+  background: #2196F3;
+}
+.drag-drop--uploaded {
+  border: 1px solid rgba(0, 0, 0, 0.38);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .drag-drop__input {
   opacity: 0;
@@ -609,6 +687,14 @@ input:focus, textarea:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4px;
+}
+
+.drag-drop__img {
+  width: 47px;
+  height: 47px;
+}
+.drag-drop__img--loading {
+  opacity: 0.3;
 }
 
 .switcher-container {
@@ -676,4 +762,67 @@ input:focus, textarea:focus {
 
 .create-container__text {
   text-align: center;
+}
+
+.preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  inset: 0;
+  left: calc(39.4% + 7px);
+  margin: 16px 8px 16px 16px;
+  background-color: #212121;
+  border-radius: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  z-index: 200;
+}
+
+.phone {
+  width: 356px;
+  height: 633px;
+  border-radius: 45px;
+  border: 14px solid #E4E4E4;
+  overflow: hidden;
+  position: relative;
+}
+.phone__image-container {
+  border-radius: 40px 40px 0 0;
+  background: #E28D8D;
+}
+.phone__descripton-container {
+  position: absolute;
+  top: 300px;
+  height: 355px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 37px 24px 36px 24px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(22.4%, #9197A3), to(#9197A3));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #9197A3 22.4%, #9197A3 100%);
+}
+
+.preview-title {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.15px;
+}
+
+.test-forms .drag-drop {
+  margin: 32px 0;
 }/*# sourceMappingURL=creation.css.map */

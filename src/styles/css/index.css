@@ -219,6 +219,13 @@ select {
   line-height: 26px;
   letter-spacing: 0.3px;
 }
+.btn[disabled] {
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.26);
+}
+.btn[disabled] .btn_icon svg path {
+  fill: rgb(166, 166, 166);
+}
 
 .text {
   font-weight: 400;
@@ -477,6 +484,11 @@ input:focus, textarea:focus {
 .header__social-list__item--active {
   color: #2196F3;
   border-bottom: 2px solid #2196F3;
+}
+
+.btn_icon {
+  width: 24px;
+  height: 24px;
 }
 
 .main-content {

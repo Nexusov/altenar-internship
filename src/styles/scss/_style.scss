@@ -61,6 +61,15 @@
     line-height: 26px; 
     letter-spacing: 0.3px;
   }
+
+  &[disabled] {
+    background: $disabledButtonBG;
+    color: $disabledButtonText;
+
+      .btn_icon svg path {
+        fill: rgb(166,166,166);
+      }
+  }
 }
 
 .text {
@@ -231,4 +240,3 @@ input, textarea {
     line-height: 14px;
   }
 }
-
