@@ -206,6 +206,9 @@ select {
 .btn:hover {
   background: #0B79D0;
 }
+.btn--large {
+  width: 100%;
+}
 .btn__icon {
   width: 24px;
   height: 24px;
@@ -329,6 +332,24 @@ input, textarea {
   line-height: 19px;
   letter-spacing: 0.15px;
 }
+input#link, textarea#link {
+  padding-left: 45px;
+}
+input#link::-webkit-input-placeholder, textarea#link::-webkit-input-placeholder {
+  padding: 0;
+}
+input#link::-moz-placeholder, textarea#link::-moz-placeholder {
+  padding: 0;
+}
+input#link:-ms-input-placeholder, textarea#link:-ms-input-placeholder {
+  padding: 0;
+}
+input#link::-ms-input-placeholder, textarea#link::-ms-input-placeholder {
+  padding: 0;
+}
+input#link::placeholder, textarea#link::placeholder {
+  padding: 0;
+}
 input:focus, textarea:focus {
   /* border: none; */
   /* outline: 2px solid $primary; */
@@ -435,18 +456,30 @@ input:focus, textarea:focus {
 .header {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .add-form {
   overflow-y: auto;
+  width: 39.94%;
   height: 100vh;
+}
+.add-form::-webkit-scrollbar {
+  width: 4px;
+}
+.add-form::-webkit-scrollbar-thumb {
+  background-color: rgb(189, 189, 189);
+  border-radius: 2px;
+}
+.add-form::-webkit-scrollbar-thumb:hover {
+  background-color: #b0b0b0;
 }
 .add-form__description {
   padding: 132px 150px 0 180px;
   background: rgb(235, 235, 235);
 }
 .add-form__content {
-  padding: 0 32px 0 180px;
+  padding: 0 32px 32px 180px;
 }
 
 .description {
@@ -455,6 +488,7 @@ input:focus, textarea:focus {
 .description__title {
   margin-bottom: 4px;
   font-weight: 500;
+  letter-spacing: 0.15px;
 }
 
 .form-title {
@@ -476,6 +510,23 @@ input:focus, textarea:focus {
 }
 .form-block__header {
   margin: 32px 0 16px 0;
+}
+.form-block__colorpicker {
+  height: 46px;
+}
+.form-block__create-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  margin-top: 48px;
 }
 
 .inputs-container .input-counter:first-child {
@@ -509,6 +560,18 @@ input:focus, textarea:focus {
   line-height: 19px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.54);
+}
+.input-counter--link::before {
+  content: url("/src/icons/svg/input-link.svg");
+  position: absolute;
+  width: 23px;
+  height: 24px;
+  left: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: -7px;
 }
 
 .drag-drop {
@@ -560,28 +623,12 @@ input:focus, textarea:focus {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  margin-top: 24px;
+  margin: 24px 0 5px 0;
 }
 .switcher-container .switcher {
   position: relative;
-  display: inline-block;
   width: 50px;
   height: 23px;
-}
-.switcher-container .switcher__checkbox {
-  opacity: 11;
-  width: 100%;
-  height: 100%;
-}
-.switcher-container .switcher__checkbox:checked + .switcher-container .switcher__checkbox__slider {
-  background-color: #2196F3;
-}
-.switcher-container .switcher__checkbox:checked + .switcher-container .switcher__checkbox__slider::before {
-  -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-          transform: translateX(26px);
-  -webkit-filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.2));
 }
 .switcher-container .switcher__slider {
   position: absolute;
@@ -590,12 +637,12 @@ input:focus, textarea:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(224, 224, 224);
+  background-color: rgba(0, 0, 0, 0.87);
   -webkit-transition: background-color 0.4s, -webkit-transform 0.4s;
   transition: background-color 0.4s, -webkit-transform 0.4s;
   transition: background-color 0.4s, transform 0.4s;
   transition: background-color 0.4s, transform 0.4s, -webkit-transform 0.4s;
-  border-radius: 24px;
+  border-radius: 33px;
 }
 .switcher-container .switcher__slider::before {
   position: absolute;
@@ -608,4 +655,25 @@ input:focus, textarea:focus {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
+}
+.switcher-container .switcher__checkbox {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.switcher-container .switcher__checkbox:checked + .switcher__slider {
+  background-color: #E0E0E0;
+}
+.switcher-container .switcher__checkbox:checked + .switcher__slider::before {
+  -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+          transform: translateX(26px);
+  -webkit-filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.2));
+}
+
+.create-container__text {
+  text-align: center;
 }/*# sourceMappingURL=creation.css.map */

@@ -50,11 +50,12 @@
                   name="descriptor" id="descriptor">
               </div>
               <div class="input-counter">
-                <input class="inputs-container__item" placeholder="Название" autocomplete="off" type="text" name="name"
-                  id="name">
+                <input class="inputs-container__item" placeholder="Название" autocomplete="off" type="text" name="name-1"
+                  id="name-1">
               </div>
               <textarea class="inputs-container__item" placeholder="Описание" type="text" name="description"
-                id="description"></textarea>
+                id="description">
+              </textarea>
             </div>
           </div>
           <div class="add-form__divider divider"></div>
@@ -100,7 +101,7 @@
           <div class="form-content__item form-block">
             <div class="form-block__header text-wrapper">
               <h2 class="text-wrapper__item form-title">Проверьте читабельность</h2>
-              <p class="text-wrapper_item text--navigation">Выберите цвет интерфейса, который будет 
+              <p class="text-wrapper_item text--navigation">Выберите цвет интерфейса, который будет <br>
                 контрастнее смотреться на выбранном ранее фоне</p>
             </div>
             <div class="form-block__switcher-container switcher-container">
@@ -110,6 +111,31 @@
                 <span class="switcher__slider"></span>
               </label>
               <p class="switcher-container__item text--switcher-light">Светлый</p>
+            </div>
+          </div>
+          <div class="add-form__divider divider"></div>
+          <div class="form-content__item form-block">
+            <div class="form-block__header text-wrapper">
+              <h2 class="text-wrapper__item form-title">Оставьте ссылку</h2>
+              <p class="text-wrapper_item text--navigation">Лучше всего ссылаться на каталог вашего магазина или <br> 
+                промо-страницу</p>
+            </div>
+            <div class="form-block__inputs-container inputs-container">
+              <div class="input-counter">
+                <input class="inputs-container__item" placeholder="Название" autocomplete="off" type="text"
+                  name="name-2" id="name-2">
+              </div>
+              <div class="input-counter input-counter--link">
+                <input class="inputs-container__item" placeholder="Ссылка" autocomplete="off" type="text" name="link"
+                  id="link">
+              </div>
+            </div>
+            <div class="form-block__create-container create-container">
+              <button class="header__button btn btn--large">
+                <p class="btn__text">Добавить</p>
+              </button>
+              <p class="create-container__text text--secondary">Подборка не будет опубликована. Вы сможете добавить <br> 
+                продукты и внести правки</p>
             </div>
           </div>
         </div>

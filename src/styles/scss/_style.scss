@@ -46,6 +46,10 @@
     background: $buttonColorHover;
   }
 
+  &--large {
+    width: 100%;
+  }
+
   &__icon {
     width: 24px;
     height: 24px;
@@ -142,6 +146,14 @@ input, textarea {
   font-weight: 400;
   line-height: 19px; 
   letter-spacing: 0.15px;
+
+  &#link {
+    padding-left: 45px;
+
+    &::placeholder {
+      padding: 0;
+    }
+  }
 
   &:focus {
     /* border: none; */

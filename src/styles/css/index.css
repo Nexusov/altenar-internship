@@ -206,6 +206,9 @@ select {
 .btn:hover {
   background: #0B79D0;
 }
+.btn--large {
+  width: 100%;
+}
 .btn__icon {
   width: 24px;
   height: 24px;
@@ -328,6 +331,24 @@ input, textarea {
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.15px;
+}
+input#link, textarea#link {
+  padding-left: 45px;
+}
+input#link::-webkit-input-placeholder, textarea#link::-webkit-input-placeholder {
+  padding: 0;
+}
+input#link::-moz-placeholder, textarea#link::-moz-placeholder {
+  padding: 0;
+}
+input#link:-ms-input-placeholder, textarea#link:-ms-input-placeholder {
+  padding: 0;
+}
+input#link::-ms-input-placeholder, textarea#link::-ms-input-placeholder {
+  padding: 0;
+}
+input#link::placeholder, textarea#link::placeholder {
+  padding: 0;
 }
 input:focus, textarea:focus {
   /* border: none; */
