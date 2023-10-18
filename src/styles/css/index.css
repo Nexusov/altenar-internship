@@ -449,6 +449,9 @@ input:focus, textarea:focus {
   gap: 12px;
   margin-bottom: 32px;
 }
+.header__button {
+  margin-bottom: 107px;
+}
 .header__social-list {
   display: -webkit-box;
   display: -ms-flexbox;
