@@ -809,7 +809,7 @@ input:focus, textarea:focus {
   border-radius: 40px 40px 0 0;
   background: #E28D8D;
 }
-.phone__descripton-container {
+.phone__description-container {
   /* position: absolute; 
   top: 339px;*/
   height: 355px;
