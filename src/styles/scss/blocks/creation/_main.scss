@@ -84,7 +84,7 @@
   }
 
   &:last-child textarea {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   input {
@@ -126,7 +126,7 @@
 
   &--link {
     &::before {
-      content: url('/src/icons/svg/input-link.svg');
+      content: url('/src/assets/icons/svg/input-link.svg');
       position: absolute;
       width: 23px;
       height: 24px;
@@ -338,8 +338,6 @@
   }
 
   &__description-container {
-    /* position: absolute; 
-    top: 339px;*/
     height: 355px; 
     display: flex;
     flex-direction: column;

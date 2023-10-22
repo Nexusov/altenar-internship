@@ -1,5 +1,5 @@
 @import "_reset";
-@import "_vars";
+@import "_variables";
 @import '_fonts';
 
 * {
@@ -7,11 +7,6 @@
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
-
-/* .container {
-  width: 100vw; // width issue
-  height: 100vh;
-} */
 
 .title {
   font-size: 36px;
@@ -165,8 +160,6 @@ input, textarea {
   }
 
   &:focus {
-    /* border: none; */
-    /* outline: 2px solid $primary; */
     outline: none;
     border: 2px solid $primary;
   }

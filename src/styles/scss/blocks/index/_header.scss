@@ -1,8 +1,7 @@
 .header {
-  /* width: 100vw; */ // width issue
   background: $secondaryPageColor;
   margin-bottom: 24px;
-  overflow: auto; // remove collapsing margins
+  overflow: auto;
   
   &__content {
     display: flex;

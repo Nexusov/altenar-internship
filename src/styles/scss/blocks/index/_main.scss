@@ -10,7 +10,6 @@
   &__titles {
     display: flex;
     margin-bottom: 33px;
-    /* justify-content: space-between;  */
   }
 
   &__posts {
@@ -39,7 +38,6 @@
   &__item {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between;  */
   }
 }
 
@@ -62,7 +60,6 @@
   &__publish-info {
     display: flex;
     width: $publishedColumnWidth;
-    /* align-items: center; */
     gap: 8px;
   }
 
@@ -75,9 +72,7 @@
   &__controls {
     display: flex;
     width: $linkColumnWidth;
-    /* justify-content: center; */
     align-items: center;
-    /* gap: 48px; */
   }
 }
 
@@ -135,17 +130,17 @@
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 8px 0px;
+    padding: 8px 0;
     margin-top: 7px;
     background: white;
     border-radius: 4px;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.20);
   }
 }
 
 .dropdown {
   &__item {
-    padding: 9px 0px 7px 16px;
+    padding: 9px 0 7px 16px;
     
     &:hover {
       background: $dropDownItemHover
@@ -156,21 +151,6 @@
 .dropdown-menu-toggle {
   display: none;
 }
-
-/* #dropdown-menu:checked  {
-  & ~ .controls__dropdown {
-    display: block;
-  }
-
-  & + .dropdown-menu-label svg rect {
-    fill-opacity: 0.24;
-  }
-
-  & + .dropdown-menu-label svg path {
-    fill: $primary;
-  }
-} */
-
 
 input[id^="dropdown-menu-"]:checked ~ .controls__dropdown {
   display: block;
