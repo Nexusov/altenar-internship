@@ -7,6 +7,10 @@ ${ResetStyles}
 
 * {
   font-family: 'Roboto', sans-serif;
+
+  transition-property: background-color, fill, border, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 }
 `;
 
