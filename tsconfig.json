@@ -1,0 +1,21 @@
+{
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "target": "ESNext",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    /* "allowImportingTsExtensions": true, */
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler"
+  },
+  "include": [
+    "src/**/*",
+    "./src/declaration.d.ts"
+  ]
+}
