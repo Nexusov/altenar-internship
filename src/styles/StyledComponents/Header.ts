@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StyledButton } from './Button';
+import { BaseButton } from './Button';
 import { colors, margins } from 'styles/Variables';
 
 interface StyledListItemProps {
@@ -27,7 +27,7 @@ export const StyledHeaderTextContainer = styled.div`
   margin-bottom: 32px;
 `
 
-export const StyledHeaderButton = styled(StyledButton)`
+export const StyledHeaderButton = styled(BaseButton)`
   margin-bottom: 107px;
 `
 

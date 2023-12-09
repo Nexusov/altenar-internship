@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { widths } from "styles/Variables";
+import { colors } from '../Variables';
 
 export const StyledPost= styled.article`
   display: flex;
@@ -13,6 +14,7 @@ export const StyledPostImgContainer= styled.div`
   background: #C4C4C4;
   overflow: hidden;
 `
+
 export const StyledPostPreview= styled.div`
   display: flex;
   align-items: center;
@@ -69,7 +71,7 @@ export const StyledPostControlsItem = styled.div`
   position: relative;
 
   &:hover svg path {
-    fill: $primary;
+    fill: ${colors.primary};
   }
 
   &:hover svg rect {

@@ -1,20 +1,21 @@
 import styled, { css } from "styled-components";
 import { colors, padding } from "styles/Variables";
 
-interface StyledButtonProps {
-  size: 'small' | 'large';
+export interface StyledButtonProps {
+  size: 'small' | 'large',
+  type: 'link' | 'button',
+  text: string,
+  href?: string;
   disabled?: boolean;
 }
 
-export const StyledButton = styled.a<StyledButtonProps>`
-  height: 42px;
+export const BaseButton = styled.a<StyledButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: ${padding.button};
   width: ${props => props.size === 'large' ? '100%' : 'auto'};
-  margin-bottom: 107px;
   background: ${colors.primary};
   color: ${colors.buttonFontColor};
   cursor: pointer;

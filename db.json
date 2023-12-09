@@ -1,11 +1,25 @@
 {
   "posts": [
     {
-
+      "id": "1",
+      "name": "Onion",
+      "image": "/src/assets/img/image12.jpg",
+      "author": "altenar",
+      "date": "25.02.22"
     },
-    
     {
-
+      "id": "2",
+      "name": "How StyledComponents made my cry",
+      "image": "/src/assets/img/image12.jpg",
+      "author": "Yegor Grashin",
+      "date": "09:12:2023"
+    },
+    {
+      "id": "3",
+      "name": "Why Dark Souls is a masterpiece",
+      "image": "/src/assets/img/image12.jpg",
+      "author": "sarterion",
+      "date": "05;01;2024"
     }
   ]
 }
