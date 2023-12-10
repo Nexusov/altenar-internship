@@ -7,6 +7,6 @@ const httpsService = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-});
+})
 
 export default httpsService;

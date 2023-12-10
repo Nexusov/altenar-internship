@@ -3,23 +3,30 @@
     {
       "id": "1",
       "name": "Onion",
-      "image": "/src/assets/img/image12.jpg",
+      "image": "",
       "author": "altenar",
       "date": "25.02.22"
     },
     {
       "id": "2",
       "name": "How StyledComponents made my cry",
-      "image": "/src/assets/img/image12.jpg",
+      "image": "https://kuban24.tv/wp-content/uploads/2020/07/Untitled-11-4.jpg",
       "author": "Yegor Grashin",
       "date": "09:12:2023"
     },
     {
       "id": "3",
       "name": "Why Dark Souls is a masterpiece",
-      "image": "/src/assets/img/image12.jpg",
+      "image": "https://static.bandainamcoent.eu/high/dark-souls/brand-setup/ds3_thumb_brand_624x468.jpg",
       "author": "sarterion",
       "date": "05;01;2024"
+    },
+    {
+      "id": "4",
+      "name": "",
+      "image": "",
+      "author": "",
+      "date": ""
     }
   ]
 }

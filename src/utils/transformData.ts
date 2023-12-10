@@ -8,16 +8,23 @@ export interface IPost {
   date: string;
 }
 
-const DEFAULT_IMAGE_URL: string = 'src/assets/img/image12.jpg';
+const DEFAULT_IMAGE_URL: string = '/assets/img/image12.jpg';
+const DEFAULT_NAME: string = 'NO NAME';
 
 export const transformPost = (post: IPost) => {
   return {
-    id: crypto.randomUUID(),
+    id: post.id,
     image: post.image || DEFAULT_IMAGE_URL,
-    name: post.name,
-    author: post.author,
+    name: post.name || DEFAULT_NAME,
+    author: post.author || DEFAULT_NAME,
     date: transformDateFormat(post.date)
-  };
-};
+  }
+}
 
+/* Письмо для Саши:
 
+  Хотел тут id чере crypto.randomUUID() делать, 
+  но тогда они отличались бы от id в json :( 
+
+  id: crypto.randomUUID() RIP
+*/

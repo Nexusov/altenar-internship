@@ -2,8 +2,11 @@ import styled from "styled-components";
 import { primaryStyle } from "./Text";
 import { colors } from "styles/Variables";
 
+interface StyledSVGProps {
+  active: boolean
+}
+
 export const StyledDropDownContainer = styled.div`
-  display: none;
   width: 134px;
   z-index: 100;
   position: absolute;
@@ -30,18 +33,17 @@ export const StyledDropdownMenuLabel = styled.label.attrs({ htmlFor: 'dropdown-m
   cursor: pointer;
 `;
 
-export const StyledDropdownMenuToggle = styled.input.attrs({ type: 'checkbox', id: 'dropdown-menu' })`
-  display: none;
-
-  &:checked ~ ${StyledDropDownContainer} {
-    display: block;
+export const StyledSvg = styled.svg<StyledSVGProps>`
+  path {
+    fill: ${props => props.active ? colors.primary : '#757575'}
   }
 
-  &:checked + ${StyledDropdownMenuLabel} svg rect {
-    fill-opacity: 0.24;
-  }
+  rect {
+    fill-opacity: ${props => props.active ? '0.24' : '0'};
 
-  &:checked + ${StyledDropdownMenuLabel} svg path {
-    fill: ${colors.primary};
+    &:hover {
+      fill-opacity: ${props => props.active ? '0.24' : '0.04'};
+    }
   }
 `;
+

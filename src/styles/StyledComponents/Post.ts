@@ -75,7 +75,7 @@ export const StyledPostControlsItem = styled.div`
   }
 
   &:hover svg rect {
-    fill-opacity: 0.04;
+    /* fill-opacity: 0.04; */
   }
 
   &:active svg rect {

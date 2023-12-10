@@ -7,7 +7,7 @@ const PostPreview = ( {image, name, author} ) => {
   return (
     <StyledPostPreview className="post__preview">
       <StyledPostImgContainer className="post__img-container">
-        <Image src={image} alt="Post image" />
+        <Image type="post" src={image} alt="Post image" />
       </StyledPostImgContainer>
       <StyledPostTextContainer className="post__text-container">
         <StyledText type="primary" className="post__name text text--primary">{name}</StyledText>
