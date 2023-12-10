@@ -33,6 +33,7 @@ const Posts = () => {
         <Post 
           key={post.id}
           id={post.id}
+          status={post.status}
           image={post.image}
           author={post.author}
           name={post.name}

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { colors } from '../Variables';
+import { IPost } from "utils/transformData";
 
-interface StyledSVGStatusProps {
-  status: 'success' | 'warning' | 'error'
+export interface StyledSVGStatusProps {
+  status: IPost['status'];
 }
 
 export const StyledStatusSVG = styled.svg<StyledSVGStatusProps>`

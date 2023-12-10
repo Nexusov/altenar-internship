@@ -1,7 +1,12 @@
+import { PostStatuses } from "components/Posts/Post";
 import httpsService from "./httpService";
 
 interface IDeletePost {
   (postId: string): Promise<void>
+}
+
+interface IUpdatePostStatus {
+  (postId: string, status: PostStatuses): Promise<void>
 }
 
 export const fetchPosts = async () => {
@@ -20,5 +25,14 @@ export const deletePost: IDeletePost = async (postId) => {
   } catch (error) {
     console.error("Error deleting post:", error);
     throw error; 
+  }
+}
+
+export const updatePostStatus: IUpdatePostStatus = async (postId, status) => {
+  try {
+    await httpsService.patch(`/posts/${postId}`, { status });
+  } catch (error) {
+    console.error("Error updating post status:", error);
+    throw error;
   }
 }

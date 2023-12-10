@@ -2,6 +2,7 @@
   "posts": [
     {
       "id": "1",
+      "status": "warning",
       "name": "Onion",
       "image": "",
       "author": "altenar",
@@ -9,13 +10,15 @@
     },
     {
       "id": "2",
-      "name": "How StyledComponents made my cry",
+      "status": "warning",
+      "name": "How StyledComponents made me cry",
       "image": "https://kuban24.tv/wp-content/uploads/2020/07/Untitled-11-4.jpg",
       "author": "Yegor Grashin",
       "date": "09:12:2023"
     },
     {
       "id": "3",
+      "status": "warning",
       "name": "Why Dark Souls is a masterpiece",
       "image": "https://static.bandainamcoent.eu/high/dark-souls/brand-setup/ds3_thumb_brand_624x468.jpg",
       "author": "sarterion",
@@ -23,9 +26,26 @@
     },
     {
       "id": "4",
+      "status": "",
+      "name": "Удали меня",
+      "image": "https://media.istockphoto.com/id/108178443/photo/can-i-come-out-now.jpg?s=612x612&w=0&k=20&c=ZE9vjwswf9kqrWvbYA92xrrhTDf6w-IjqKbdyhlVJns=",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "5",
+      "status": "wrong status",
       "name": "",
       "image": "",
       "author": "",
+      "date": ""
+    },
+    {
+      "id": "6",
+      "status": "success",
+      "name": "Этот статус запомнил своё состояние",
+      "image": "https://perm.hse.ru/data/2018/02/07/1162144151/3master-software-developers-productivity.jpg",
+      "author": "Я",
       "date": ""
     }
   ]

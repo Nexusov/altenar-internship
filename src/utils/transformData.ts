@@ -1,7 +1,9 @@
+import { PostStatuses } from "components/Posts/Post";
 import { transformDateFormat } from "./transformDateFormat";
 
 export interface IPost {
   id: string;
+  status: PostStatuses;
   image: string;
   name: string;
   author: string;
@@ -14,6 +16,7 @@ const DEFAULT_NAME: string = 'NO NAME';
 export const transformPost = (post: IPost) => {
   return {
     id: post.id,
+    status: post.status || PostStatuses.Warning,
     image: post.image || DEFAULT_IMAGE_URL,
     name: post.name || DEFAULT_NAME,
     author: post.author || DEFAULT_NAME,

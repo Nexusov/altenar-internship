@@ -1,15 +1,39 @@
+import { useState } from "react";
 import Controls from "components/Controls/Controls";
 import PostPreview from "./PostPreview";
 import PostPublishInfo from "./PostPublishInfo";
 
 import { StyledPost } from "styles/StyledComponents/Post";
+import { IPost } from "utils/transformData";
+import { updatePostStatus } from "services/postsService";
 
-const Post = ({ id, image, author, name, date, handleDelete }) => {
+export enum PostStatuses {
+  Success = 'success',
+  Warning = 'warning',
+  Error = 'error'
+}
+
+export interface IPostProps extends IPost {
+  handleDelete: () => void
+}
+
+const Post: React.FC<IPostProps> = ({ id, image, author, name, date, handleDelete, status: initialStatus }) => {
+  const [status, setStatus] = useState(initialStatus); 
+
+  const handlePublish = async () => {
+    try {
+      await updatePostStatus(id, PostStatuses.Success);
+      setStatus(PostStatuses.Success);
+    } catch (error) {
+      console.error("Error while updating post status:", error);
+    }
+  }
+
   return (
     <StyledPost className="posts__item post">
       <PostPreview image={image} author={author} name={name} />
-      <PostPublishInfo author={author} date={date} />
-      <Controls handleDelete={handleDelete} />
+      <PostPublishInfo author={author} date={date} status={status}/>
+      <Controls handleDelete={handleDelete} onPublish={handlePublish} status={status}/>
     </StyledPost>
   )
 }

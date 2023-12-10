@@ -47,7 +47,7 @@ export const StyledPostControls = styled.div`
   align-items: center;
 `
 
-export const StyledPostStatusContainer = styled.div`
+export const StyledPostStatusesContainer = styled.div`
   margin-top: 14px;
 `
 
