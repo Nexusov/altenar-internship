@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { BaseButton } from './Button';
 import { colors, margins } from 'styles/Variables';
 
 interface StyledListItemProps {
@@ -25,10 +24,6 @@ export const StyledHeaderTextContainer = styled.div`
   flex-direction: column;
   gap: 12px;
   margin-bottom: 32px;
-`
-
-export const StyledHeaderButton = styled(BaseButton)`
-  margin-bottom: 107px;
 `
 
 export const StyledHeaderSocialList = styled.ul`
