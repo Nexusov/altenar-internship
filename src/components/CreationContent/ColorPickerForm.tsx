@@ -2,6 +2,7 @@ import FormHeader from "components/FormHeader/FormHeader";
 import { StyledFormTitle } from "styles/StyledComponents/Title";
 import { StyledText, TextStyleTypes } from 'styles/StyledComponents/Text';
 import { StyledColorPicker, StyledColorPickerCircle, StyledColorPickerLabel } from "styles/StyledComponents/Colorpicker";
+import ColorPicker from "components/ColorPicker/ColorPicker";
 
 const ColorPickerForm = () => {
   return (
@@ -12,10 +13,7 @@ const ColorPickerForm = () => {
           Лучше всего подойдет цвет преобладающий на обложке
         </StyledText>
       </FormHeader>
-      <StyledColorPicker>
-        <StyledColorPickerCircle className="colorpicker__circle" type="color" id="colorPicker" defaultValue="#9197A3" />
-        <StyledColorPickerLabel className="colorpicker__label" htmlFor="colorPicker">Выберите цвет</StyledColorPickerLabel>
-      </StyledColorPicker>
+      <ColorPicker />
     </>
   )
 }
