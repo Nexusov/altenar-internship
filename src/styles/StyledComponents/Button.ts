@@ -25,7 +25,7 @@ export const BaseButtonStyles = css`
 
 export const StyledButton = styled.button<StyledButton>`
   ${BaseButtonStyles};
-  width: '100%';
+  width: 100%;
 
   ${props => props.disabled && css`
     background: ${colors.disabledButtonBG};

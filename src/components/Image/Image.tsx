@@ -1,7 +1,13 @@
 import { StyledPostImg } from "styles/StyledComponents/Image";
 
+export enum ImageTypes {
+  Post = 'post',
+  Preview = 'preview',
+  DragnDrop = 'dragndrop'
+}
+
 interface ImageProps {
-  type: 'post' | 'preview' | 'dragndrop'
+  type: ImageTypes
   src: string,
   alt: string,
 }

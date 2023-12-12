@@ -1,5 +1,5 @@
-import { StyledText } from "styles/StyledComponents/Text"
-import { StyledButton} from '../../styles/StyledComponents/Button';
+import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text"
+import { StyledButton } from '../../styles/StyledComponents/Button';
 
 export interface ButtonProps {
   text: string,
@@ -8,8 +8,8 @@ export interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ text, disabled }) => {
   return (
-    <StyledButton disabled={disabled}>
-      <StyledText type={"button"}>{text}</StyledText>
+    <StyledButton disabled={disabled} type="submit">
+      <StyledText type={TextStyleTypes.Button}>{text}</StyledText>
     </StyledButton>
   )
 }

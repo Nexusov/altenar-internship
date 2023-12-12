@@ -1,6 +1,6 @@
 import PlusIcon from "components/Icons/ButtonIcon/ButtonIcon";
 
-import { StyledText } from "styles/StyledComponents/Text"
+import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text"
 import { StyledDisabledNavLink, StyledNavLink } from "styles/StyledComponents/Link";
 
 export interface LinkProps {
@@ -14,12 +14,12 @@ const Link: React.FC<LinkProps> = ({ src, text, disabled}) => {
     disabled ? (
       <StyledDisabledNavLink>
         <PlusIcon />
-        <StyledText type={"button"}>{text}</StyledText>
+        <StyledText type={TextStyleTypes.Button}>{text}</StyledText>
       </StyledDisabledNavLink>
     )  : (
       <StyledNavLink to={src}>
         <PlusIcon />
-        <StyledText type={"button"}>{text}</StyledText>
+        <StyledText type={TextStyleTypes.Button}>{text}</StyledText>
       </StyledNavLink>
     )
   )

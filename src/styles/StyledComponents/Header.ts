@@ -42,3 +42,7 @@ export const StyledHeaderSocialListItem = styled.li<StyledListItemProps>`
   font-weight: 500;
   cursor: pointer;
 `;
+
+export const StyledFormTextWrapper = styled.div`
+  margin: 32px 0 16px 0;
+`

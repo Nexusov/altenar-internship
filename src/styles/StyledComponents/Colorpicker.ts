@@ -3,6 +3,7 @@ import { colors } from 'styles/Variables';
 
 export const StyledColorPicker = styled.div`
   position: relative;
+  height: 46px;
 `;
 
 export const StyledColorPickerCircle = styled.input.attrs({ type: 'color' })`
@@ -17,6 +18,7 @@ export const StyledColorPickerCircle = styled.input.attrs({ type: 'color' })`
   overflow: hidden;
   cursor: pointer;
   transition: padding 0.2s ease-in;
+  appearance: none;
   -webkit-appearance: none;
   
   &::-webkit-color-swatch-wrapper {
@@ -31,6 +33,10 @@ export const StyledColorPickerCircle = styled.input.attrs({ type: 'color' })`
   &:hover {
     padding: 3px;
     border: 1px solid rgba(196, 196, 196, 1);
+  }
+
+  &:hover + .colorpicker__label {
+    opacity: 1;
   }
 
   &:focus {

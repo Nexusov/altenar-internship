@@ -1,8 +1,20 @@
 import styled, { css } from "styled-components";
 import { colors } from "styles/Variables";
 
+export enum TextStyleTypes {
+  Primary = 'primary',
+  Secondary = 'secondary',
+  Navigation = 'navigation',
+  Hyperlink = 'hyperlink',
+  Button = 'button',
+  Error = 'error',
+  SwitcherLight = 'switcher-light',
+  SwitcherDark = 'switcher-dark',
+  SizeError = 'size-error'
+}
+
 interface StyledTextProps {
-  type: 'primary' | 'secondary' | 'navigation' | 'hyperlink' | 'button' | 'switcher-light' | 'switcher-dark';
+  type: TextStyleTypes
 }
 
 export const BaseTextStyles = styled.p`
@@ -20,6 +32,15 @@ export const secondaryStyle = css`
   font-size: 12px;
   color: ${colors.textSecondary};
   line-height: normal;
+  letter-spacing: 0.4px;
+`;
+
+export const errorStyle = css`
+  color: ${colors.inputErrorMsg};
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
   letter-spacing: 0.4px;
 `;
 
@@ -60,12 +81,31 @@ export const switcherLightStyle = css`
   color: ${colors.textSecondary};
 `;
 
+export const sizeError = css`
+  padding: 4px 8px;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: -23px;
+  border-radius: 4px;
+  color: #621B16;
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  background: #FEECEB;
+`;
+
+
 export const StyledText = styled(BaseTextStyles)<StyledTextProps>`
-  ${props => props.type === 'primary' && primaryStyle}
-  ${props => props.type === 'secondary' && secondaryStyle}
-  ${props => props.type === 'navigation' && navigationStyle}
-  ${props => props.type === 'hyperlink' && hyperlinkStyle}
-  ${props => props.type === 'button' && buttonTextStyle}
-  ${props => props.type === 'switcher-dark' && switcherDarkStyle}
-  ${props => props.type === 'switcher-light' && switcherLightStyle}
+  ${props => props.type === TextStyleTypes.Primary && primaryStyle}
+  ${props => props.type === TextStyleTypes.Secondary && secondaryStyle}
+  ${props => props.type === TextStyleTypes.Error && errorStyle}
+  ${props => props.type === TextStyleTypes.Hyperlink && hyperlinkStyle}
+  ${props => props.type === TextStyleTypes.SizeError && sizeError}
+  ${props => props.type === TextStyleTypes.Navigation && navigationStyle}
+  ${props => props.type === TextStyleTypes.Button && buttonTextStyle}
+  ${props => props.type === TextStyleTypes.SwitcherDark && switcherDarkStyle}
+  ${props => props.type === TextStyleTypes.SwitcherLight && switcherLightStyle}
 `;
