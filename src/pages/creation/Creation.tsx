@@ -1,11 +1,14 @@
 import FixedNavHeader from "components/FixedNavHeader/FixedNavHeader";
 import MainCreation from "components/Main/MainCreation";
+import { SwitcherProvider } from "components/Phone/PhoneContext";
 
 const Creation = () => {
   return (
     <>
-      <FixedNavHeader />
-      <MainCreation />
+      <SwitcherProvider>
+        <FixedNavHeader />
+        <MainCreation />
+      </SwitcherProvider>
     </>
   )
 }

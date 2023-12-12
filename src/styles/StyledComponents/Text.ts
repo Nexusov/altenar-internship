@@ -11,11 +11,11 @@ export enum TextStyleTypes {
   SwitcherLight = 'switcher-light',
   SwitcherDark = 'switcher-dark',
   SizeError = 'size-error',
-  PhoneTitle = 'phone-title',
 }
 
 interface StyledTextProps {
-  type: TextStyleTypes
+  type: TextStyleTypes,
+  isToggled?: boolean;
 }
 
 export const BaseTextStyles = styled.p`
@@ -82,14 +82,23 @@ export const switcherLightStyle = css`
   color: ${colors.textSecondary};
 `;
 
-export const phoneTitle = css`
-  color: ${colors.textPrimary};
+export const StyledPhoneTitle = styled.p<{isToggled: boolean}>`
+  color: ${props => props.isToggled ? "white" : colors.textPrimary};
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 32px; 
   letter-spacing: 0.15px;
 `;
+
+export const StyledPhoneText = styled.p<{isToggled: boolean}>`
+  color: ${props => props.isToggled ? "white" : colors.textPrimary};
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+`
 
 export const sizeError = css`
   padding: 4px 8px;
@@ -117,5 +126,4 @@ export const StyledText = styled(BaseTextStyles)<StyledTextProps>`
   ${props => props.type === TextStyleTypes.Button && buttonTextStyle}
   ${props => props.type === TextStyleTypes.SwitcherDark && switcherDarkStyle}
   ${props => props.type === TextStyleTypes.SwitcherLight && switcherLightStyle}
-  ${props => props.type === TextStyleTypes.PhoneTitle && phoneTitle}
 `;

@@ -39,7 +39,7 @@ const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength }
         onChange={(e) => setValue(e.target.value)} 
         isError={isError}
       />
-      <StyledCharCounter>{remaining}</StyledCharCounter>
+      <StyledCharCounter isError={isError}>{remaining}</StyledCharCounter>
       {isError && <StyledText type={TextStyleTypes.Error}>Название превышает 30 символов</StyledText>}
     </StyledInputWrapper>
   )

@@ -3,10 +3,7 @@ import styled from "styled-components";
 export const StyledInputsContainer = styled.div`
   display: flex;
   flex-direction: column;
-
-/*   :first-child {
-    margin-top: 8px;
-  } */
+  gap: 16px;
 
   input {
     width: 100%;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors, margins } from "styles/Variables";
 
 export const StyledPhone = styled.div`
   width: 356px;
@@ -29,17 +28,16 @@ export const StyledPhoneImage = styled.div`
   background: #E28D8D;
 `
 
-export const StyledPhoneDescription = styled.div`
+export const StyledPhoneDescription = styled.div<{color: string}>`
     height: 355px; 
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 37px 24px 36px 24px;
-    background: #9197A3;
     background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.00) 0%,
-      #9197A3 22.4%,
-      #9197A3 100%);  
+      ${props => props.color} 22.4%,
+      ${props => props.color} 100%);  
 `
 
 

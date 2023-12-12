@@ -30,7 +30,6 @@ const GlobalStyles = createGlobalStyle`
 
   input, textarea {
     resize: none;
-    margin-bottom: 16px;
     height: 56px;
     border-radius: 4px;
     border: 1px solid ${colors.inputBorderColor};
