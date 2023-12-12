@@ -9,3 +9,7 @@ export const StyledPostImg = styled.img`
 export const StyledPreviewImg = styled.img`
   ${StyledPostImg}
 `;
+
+export const StyledDragnDropImg = styled.img`
+  ${StyledPostImg}
+`;
