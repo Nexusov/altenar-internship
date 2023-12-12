@@ -10,7 +10,8 @@ export enum TextStyleTypes {
   Error = 'error',
   SwitcherLight = 'switcher-light',
   SwitcherDark = 'switcher-dark',
-  SizeError = 'size-error'
+  SizeError = 'size-error',
+  PhoneTitle = 'phone-title',
 }
 
 interface StyledTextProps {
@@ -81,6 +82,15 @@ export const switcherLightStyle = css`
   color: ${colors.textSecondary};
 `;
 
+export const phoneTitle = css`
+  color: ${colors.textPrimary};
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; 
+  letter-spacing: 0.15px;
+`;
+
 export const sizeError = css`
   padding: 4px 8px;
   align-items: center;
@@ -97,7 +107,6 @@ export const sizeError = css`
   background: #FEECEB;
 `;
 
-
 export const StyledText = styled(BaseTextStyles)<StyledTextProps>`
   ${props => props.type === TextStyleTypes.Primary && primaryStyle}
   ${props => props.type === TextStyleTypes.Secondary && secondaryStyle}
@@ -108,4 +117,5 @@ export const StyledText = styled(BaseTextStyles)<StyledTextProps>`
   ${props => props.type === TextStyleTypes.Button && buttonTextStyle}
   ${props => props.type === TextStyleTypes.SwitcherDark && switcherDarkStyle}
   ${props => props.type === TextStyleTypes.SwitcherLight && switcherLightStyle}
+  ${props => props.type === TextStyleTypes.PhoneTitle && phoneTitle}
 `;

@@ -1,4 +1,4 @@
-import { StyledPostImg } from "styles/StyledComponents/Image";
+import { StyledPostImg, StyledPreviewImg } from "styles/StyledComponents/Image";
 
 export enum ImageTypes {
   Post = 'post',
@@ -14,8 +14,10 @@ interface ImageProps {
 
 export const Image: React.FC<ImageProps> = ({ src, alt, type }) => {
   switch (type) {
-    case 'post':
+    case ImageTypes.Post:
       return <StyledPostImg src={src} alt={alt} />;
+    case ImageTypes.Preview:
+      return <StyledPreviewImg src={src} alt={alt} />;
     default:
       return null; 
   }

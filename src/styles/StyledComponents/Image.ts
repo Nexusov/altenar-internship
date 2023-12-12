@@ -5,3 +5,7 @@ export const StyledPostImg = styled.img`
   height: 100%;
   object-fit: cover;
 `;
+
+export const StyledPreviewImg = styled.img`
+  ${StyledPostImg}
+`;

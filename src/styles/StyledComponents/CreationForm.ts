@@ -2,7 +2,7 @@ import { BaseTitleStyles } from 'styles/StyledComponents/Title';
 import styled from 'styled-components';
 import { colors, margins } from 'styles/Variables';
 
-export const CreationFormContainer = styled.section`
+export const StyledCreationSection = styled.section`
   overflow-y: auto;
   width: 39.94%;
   height: 100vh;

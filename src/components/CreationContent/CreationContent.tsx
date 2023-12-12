@@ -9,7 +9,7 @@ import CreationFooter from "./CreationFooter";
 
 const CreationContent = () => {
   return (
-    <StyledCreationContentContainer className="add-form__content form-content">
+    <StyledCreationContentContainer>
       <AboutForm />
       <Divider />
       <FileUploadForm />
