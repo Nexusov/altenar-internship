@@ -6,60 +6,19 @@ import { DragnDropStatuses, StyledDragnDrop } from "styles/StyledComponents/Drag
 import DragnDropText from "./DragnDropText";
 import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text";
 import Image, { ImageTypes } from "components/Image/Image";
+import useFileUploader from "hooks/useFileUploader";
 
 const DragnDrop = () => {
-  const [status, setStatus] = useState(DragnDropStatuses.Default);
-  const fileInputRef = useRef(null);
 
-  const handleReset = () => {
-    setStatus(DragnDropStatuses.Default);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
-  };
-
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
-    setStatus(DragnDropStatuses.Active);
-  };
-
-  const handleDragLeave = (e: React.DragEvent) => {
-    e.preventDefault();
-    setStatus(DragnDropStatuses.Default);
-  };
-
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setStatus(DragnDropStatuses.Loading);
-    console.log("File is loading:");
-
-    const files = e.dataTransfer.files;
-    if (files) {
-      try {
-        setStatus(DragnDropStatuses.Uploaded)
-        console.log("File has loaded:");
-      } catch (error) {
-        console.error("File uploading error:", error);
-        setStatus(DragnDropStatuses.Error); 
-      }
-    }
-  };
-
-  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setStatus(DragnDropStatuses.Loading);
-    console.log("File is loading:");
-
-    const files = e.target.files;
-    if (files) {
-      try {
-        setStatus(DragnDropStatuses.Uploaded)
-        console.log("File has loaded:");
-      } catch (error) {
-        console.error("File uploading error:", error);
-        setStatus(DragnDropStatuses.Error); 
-      }
-    }
-  };
+  const {
+    status,
+    handleReset,
+    handleDragOver,
+    handleDragLeave,
+    handleDrop,
+    handleFileInputChange,
+    fileInputRef
+  } = useFileUploader();
 
   return (
     <StyledDragnDrop
@@ -84,6 +43,7 @@ const DragnDrop = () => {
         className="drag-drop__input"
         accept="image/*"
         onChange={handleFileInputChange}
+        ref={fileInputRef}
       />
       <DragnDropText />
       {status === DragnDropStatuses.Error && (
