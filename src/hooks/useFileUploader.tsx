@@ -2,50 +2,61 @@ import { useState, useRef } from 'react';
 import { DragnDropStatuses } from "styles/StyledComponents/DragnDrop";
 
 const useFileUploader = () => {
-  const [status, setStatus] = useState(DragnDropStatuses.Default);
-  const fileInputRef = useRef(null);
+  const [status, setStatus] = useState(DragnDropStatuses.Default)
+  const [imageUrl, setImageUrl] = useState('assets/img/image12.jpg')
+  const fileInputRef = useRef(null)
 
   const handleReset = () => {
+    setImageUrl(null);
     setStatus(DragnDropStatuses.Default);
     if (fileInputRef.current) {
-      fileInputRef.current.value = "";
+      fileInputRef.current.value = ""
     }
   };
 
   const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
-    setStatus(DragnDropStatuses.Active);
+    e.preventDefault()
+    setStatus(DragnDropStatuses.Active)
   };
 
   const handleDragLeave = (e: React.DragEvent) => {
-    e.preventDefault();
-    setStatus(DragnDropStatuses.Default);
+    e.preventDefault()
+    setStatus(DragnDropStatuses.Default)
   };
 
   const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    processFile(e.dataTransfer.files);
+    e.preventDefault()
+    processFile(e.dataTransfer.files)
   };
 
   const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    processFile(e.target.files);
+    e.preventDefault()
+    processFile(e.target.files)
   };
 
   const processFile = (files: FileList) => {
     const file = files[0]
-    setStatus(DragnDropStatuses.Loading);
-    console.log("File is loading:");
+    if (!file) return
+  
+    const url = URL.createObjectURL(file);
+    const img = new Image()
 
-    try {
-      setStatus(DragnDropStatuses.Uploaded);
-      console.log("File has loaded:");
-    } catch (error) {
-      console.error("File uploading error:", error);
-      setStatus(DragnDropStatuses.Error);
+    img.onload = () => {
+      if (img.width === img.height && img.width >= 1242) {
+        setImageUrl(url)
+        setStatus(DragnDropStatuses.Loading)
+        console.log("File is loading:")
+        setStatus(DragnDropStatuses.Uploaded)
+        console.log("File has loaded:")
+      } else {
+        setStatus(DragnDropStatuses.Error)
+        console.error("Error loading image.")
+        URL.revokeObjectURL(url)
+      }
     }
-  };
-
+    img.src = url
+  }
+  
   return {
     status,
     handleReset,
@@ -53,8 +64,9 @@ const useFileUploader = () => {
     handleDragLeave,
     handleDrop,
     handleFileInputChange,
-    fileInputRef
+    fileInputRef,
+    imageUrl
   }
 }
 
-export default useFileUploader;
+export default useFileUploader

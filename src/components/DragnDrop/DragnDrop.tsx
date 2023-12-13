@@ -17,8 +17,9 @@ const DragnDrop = () => {
     handleDragLeave,
     handleDrop,
     handleFileInputChange,
-    fileInputRef
-  } = useFileUploader();
+    fileInputRef,
+    imageUrl
+  } = useFileUploader()
 
   return (
     <StyledDragnDrop
@@ -34,7 +35,7 @@ const DragnDrop = () => {
       }
       {
         (status === DragnDropStatuses.Loading || status === DragnDropStatuses.Uploaded) 
-          ? <Image type={ImageTypes.DragnDrop} alt="Uploaded Image" src={'assets/img/image12.jpg'} />
+          ? <Image type={ImageTypes.DragnDrop} alt="Uploaded Image" src={imageUrl} />
           : <FileIcon />
       }
       <input
