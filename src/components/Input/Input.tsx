@@ -5,7 +5,6 @@ import { InputTypes, StyledInput, StyledInputWrapper } from 'styles/StyledCompon
 import { TextStyleTypes } from 'styles/StyledComponents/Text';
 import { StyledText } from '../../styles/StyledComponents/Text';
 import LinkIcon from 'components/Icons/LinkIcon/LinkIcon';
-import { usePhone } from 'components/Phone/PhoneContext';
 
 export interface IINputProps {
   placeholder: string

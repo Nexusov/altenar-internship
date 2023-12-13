@@ -1,5 +1,4 @@
 import { createContext, useState, useContext, useRef } from 'react';
-import { TimeoutsOptions } from 'retry';
 import { DEFAULT_DESCRIPTION, DEFAULT_IMAGE_URL, DEFAULT_POST_TITLE } from 'utils/transformData';
 
 const PhoneContext = createContext({
