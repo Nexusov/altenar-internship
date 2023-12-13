@@ -1,5 +1,4 @@
 import { StyledSwitcher } from "styles/StyledComponents/Switcher";
-import { useState } from 'react';
 import { usePhone } from "../Phone/PhoneContext";
 
 const Switcher = () => {

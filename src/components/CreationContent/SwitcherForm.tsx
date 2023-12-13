@@ -1,5 +1,4 @@
 import FormHeader from "components/FormHeader/FormHeader";
-import Switcher from "components/Switcher/Switcher";
 import SwitcherContainer from "components/Switcher/SwitcherContainer";
 import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text";
 import { StyledFormTitle } from "styles/StyledComponents/Title";

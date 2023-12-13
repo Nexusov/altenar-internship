@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyledSvg } from "styles/StyledComponents/DropDown";
 
 const ActionIcon = ({ active }) => {

@@ -1,7 +1,6 @@
 import { usePhone } from "components/Phone/PhoneContext";
 import { StyledColorPicker, StyledColorPickerCircle, StyledColorPickerLabel } from "styles/StyledComponents/Colorpicker";
 
-
 const ColorPicker = () => {
   const { setColor } = usePhone();
   const handleColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {

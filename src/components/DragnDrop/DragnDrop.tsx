@@ -1,5 +1,3 @@
-import { useState, useRef } from "react";
-
 import CloseIcon from "components/Icons/CloseIcon/CloseIcon";
 import FileIcon from "components/Icons/FileIcon/FileIcon";
 import { DragnDropStatuses, StyledDragnDrop } from "styles/StyledComponents/DragnDrop";

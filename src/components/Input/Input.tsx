@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { StyledCharCounter } from 'styles/StyledComponents/CharacterCounter';
 import { InputTypes, StyledInput, StyledInputWrapper } from 'styles/StyledComponents/Input';
