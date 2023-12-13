@@ -5,8 +5,12 @@ import { InputTypes } from "styles/StyledComponents/Input";
 import FormHeader from "components/FormHeader/FormHeader";
 import { StyledFormTitle } from "styles/StyledComponents/Title";
 import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text";
+import { usePhone } from "components/Phone/PhoneContext";
 
 const AboutForm = () => {
+
+  const { phoneDescription, setPhoneDescription, phoneTitle, setPhoneTitle } = usePhone();
+  
   return (
     <>
       <FormHeader>
@@ -15,7 +19,7 @@ const AboutForm = () => {
       </FormHeader>
       <InputsContainer>
         <Input placeholder="Дискриптор" type={InputTypes.Text} name="descriptor" id="descriptor" maxLength={30} />
-        <Input placeholder="Название" type={InputTypes.Text} name="name" id="name" maxLength={50} />
+        <Input placeholder="Название" type={InputTypes.PhoneText} name="name" id="name" maxLength={50} value={phoneTitle} onChange={(e) => setPhoneTitle(e.target.value)} />
         <Textarea placeholder="Описание" name="description" id="description"></Textarea>
       </InputsContainer>
     </>

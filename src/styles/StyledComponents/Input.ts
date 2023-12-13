@@ -21,6 +21,7 @@ export enum InputTypes {
   Submit = "submit",
   Tel = "tel",
   Text = "text",
+  PhoneText = "text",
   Time = "time",
   Url = "url",
   Week = "week",
@@ -28,7 +29,7 @@ export enum InputTypes {
 
 export interface StyledInputProps {
   type: InputTypes,
-  isError: boolean
+  isError: boolean,
 }
 
 export const StyledInput = styled.input<StyledInputProps>`

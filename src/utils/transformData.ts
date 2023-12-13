@@ -12,6 +12,8 @@ export interface IPost {
 
 export const DEFAULT_IMAGE_URL: string = '/assets/img/image12.jpg';
 export const DEFAULT_NAME: string = 'NO NAME';
+export const DEFAULT_DESCRIPTION: string = 'The useful properties of onions are versatile. It is a powerful antimicrobial that effectively fights internal and external infection. Onions have antiviral, antibacterial, anthelmintic, antifungal, disinfectant properties. In case of colds, it is not only consumed internally, but also left indoors in cut form to disinfect the air.'
+export const DEFAULT_POST_TITLE = 'Onion'
 
 export const transformPost = (post: IPost) => {
   return {
