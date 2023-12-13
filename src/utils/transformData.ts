@@ -10,8 +10,8 @@ export interface IPost {
   date: string;
 }
 
-const DEFAULT_IMAGE_URL: string = '/assets/img/image12.jpg';
-const DEFAULT_NAME: string = 'NO NAME';
+export const DEFAULT_IMAGE_URL: string = '/assets/img/image12.jpg';
+export const DEFAULT_NAME: string = 'NO NAME';
 
 export const transformPost = (post: IPost) => {
   return {

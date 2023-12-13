@@ -1,13 +1,15 @@
+import { usePhone } from 'components/Phone/PhoneContext';
 import { useState, useRef } from 'react';
 import { DragnDropStatuses } from "styles/StyledComponents/DragnDrop";
+import { DEFAULT_IMAGE_URL } from 'utils/transformData';
 
 const useFileUploader = () => {
   const [status, setStatus] = useState(DragnDropStatuses.Default)
-  const [imageUrl, setImageUrl] = useState('assets/img/image12.jpg')
+  const { imageUrl, setImageUrl } = usePhone();
   const fileInputRef = useRef(null)
 
   const handleReset = () => {
-    setImageUrl(null);
+    setImageUrl(DEFAULT_IMAGE_URL);
     setStatus(DragnDropStatuses.Default);
     if (fileInputRef.current) {
       fileInputRef.current.value = ""
@@ -43,9 +45,9 @@ const useFileUploader = () => {
 
     img.onload = () => {
       if (img.width === img.height && img.width >= 1242) {
-        setImageUrl(url)
         setStatus(DragnDropStatuses.Loading)
         console.log("File is loading:")
+        setImageUrl(url)
         setStatus(DragnDropStatuses.Uploaded)
         console.log("File has loaded:")
       } else {
