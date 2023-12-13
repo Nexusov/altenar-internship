@@ -61,7 +61,7 @@ const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength, 
             id={id}
             maxLength={maxLength}
             value={value}
-            onChange={InputTypes.Url ? handleURLChange : handleOnChange}
+            onChange={type === InputTypes.Url ? handleURLChange : handleOnChange}
             isError={isError}
           />
       }
