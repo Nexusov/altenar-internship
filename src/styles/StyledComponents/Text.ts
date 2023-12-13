@@ -87,8 +87,9 @@ export const StyledPhoneTitle = styled.p<{isToggled: boolean}>`
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 32px; 
+  line-height: 25px;
   letter-spacing: 0.15px;
+  overflow-wrap: anywhere;
 `;
 
 export const StyledPhoneText = styled.p<{isToggled: boolean}>`
@@ -98,6 +99,7 @@ export const StyledPhoneText = styled.p<{isToggled: boolean}>`
   font-style: normal;
   line-height: 20px;
   letter-spacing: 0.15px;
+  overflow-wrap: anywhere;
 `
 
 export const sizeError = css`

@@ -1,14 +1,14 @@
 import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text"
 import { StyledButton } from '../../styles/StyledComponents/Button';
+import { ButtonHTMLAttributes } from "react";
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
-  disabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, disabled }) => {
+const Button: React.FC<ButtonProps> = ({ text, ...props }) => {
   return (
-    <StyledButton disabled={disabled} type="submit">
+    <StyledButton {...props} type="submit">
       <StyledText type={TextStyleTypes.Button}>{text}</StyledText>
     </StyledButton>
   )

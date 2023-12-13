@@ -17,7 +17,7 @@ export interface IPostProps extends IPost {
   handleDelete: () => void
 }
 
-const Post: React.FC<IPostProps> = ({ id, image, author, name, date, handleDelete, status: initialStatus }) => {
+const Post: React.FC<IPostProps> = ({ id, image, author, title, date, handleDelete, status: initialStatus }) => {
   const [status, setStatus] = useState(initialStatus); 
 
   const handlePublish = async () => {
@@ -31,7 +31,7 @@ const Post: React.FC<IPostProps> = ({ id, image, author, name, date, handleDelet
 
   return (
     <StyledPost className="posts__item post">
-      <PostPreview image={image} author={author} name={name} />
+      <PostPreview image={image} author={author} title={title} />
       <PostPublishInfo author={author} date={date} status={status}/>
       <Controls handleDelete={handleDelete} onPublish={handlePublish} status={status}/>
     </StyledPost>

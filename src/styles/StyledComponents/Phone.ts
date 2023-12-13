@@ -37,7 +37,7 @@ export const StyledPhoneDescription = styled.div<{color: string}>`
     background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.00) 0%,
       ${props => props.color} 22.4%,
-      ${props => props.color} 100%);  
+      ${props => props.color} 100%);
 `
 
 

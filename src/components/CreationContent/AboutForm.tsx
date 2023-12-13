@@ -9,7 +9,7 @@ import { usePhone } from "components/Phone/PhoneContext";
 
 const AboutForm = () => {
 
-  const { phoneDescription, setPhoneDescription, phoneTitle, setPhoneTitle } = usePhone();
+  const { setPhoneDescription, setPhoneTitle } = usePhone();
   
   return (
     <>
@@ -19,8 +19,8 @@ const AboutForm = () => {
       </FormHeader>
       <InputsContainer>
         <Input placeholder="Дискриптор" type={InputTypes.Text} name="descriptor" id="descriptor" maxLength={30} />
-        <Input placeholder="Название" type={InputTypes.PhoneText} name="name" id="name" maxLength={50} value={phoneTitle} onChange={(e) => setPhoneTitle(e.target.value)} />
-        <Textarea placeholder="Описание" name="description" id="description"></Textarea>
+        <Input placeholder="Название" type={InputTypes.PhoneText} name="name" id="name" maxLength={50} onChange={(e) => setPhoneTitle(e.target.value)} />
+        <Textarea placeholder="Описание" name="description" id="description" onChange={(e) => setPhoneDescription(e.target.value)}></Textarea>
       </InputsContainer>
     </>
   )

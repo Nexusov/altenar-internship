@@ -36,7 +36,7 @@ const Posts = () => {
           status={post.status}
           image={post.image}
           author={post.author}
-          name={post.name}
+          title={post.title}
           date={post.date}
           handleDelete={() => handleDelete(post.id)}
       />

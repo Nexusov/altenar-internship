@@ -15,26 +15,26 @@ export interface IINputProps {
   maxLength: number
   isError?: boolean
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  value?: string;
 }
 
-const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength, onChange, value }) => {
+const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength, onChange }) => {
   const [value, setValue] = useState('');
-  const [remaining, setRemaining] = useState(maxLength)
-
-  useEffect(() => {
-    setRemaining(maxLength - value.length)
-  }, [value, maxLength])
 
   const handleURLChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
 
     if (inputValue.includes("http") || inputValue === '') {
-      setValue(inputValue);
+      setValue(inputValue)
     }
   }
 
-  const isError = value.length >= maxLength;
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value)
+    onChange && onChange(e)
+  }
+
+  const isError = value.length >= maxLength
+  const remaining = maxLength - value.length
 
   return (
     <StyledInputWrapper>
@@ -49,7 +49,7 @@ const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength, 
             id={id}
             maxLength={maxLength}
             value={value}
-            onChange={onChange}
+            onChange={handleOnChange}
             isError={isError}
           />
           :
@@ -61,7 +61,7 @@ const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength, 
             id={id}
             maxLength={maxLength}
             value={value}
-            onChange={InputTypes.Url ? handleURLChange : (e) => setValue(e.target.value)}
+            onChange={InputTypes.Url ? handleURLChange : handleOnChange}
             isError={isError}
           />
       }

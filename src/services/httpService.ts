@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const _baseURL: string = 'http://localhost:5000'
 
@@ -9,4 +9,4 @@ const httpsService = axios.create({
   },
 })
 
-export default httpsService;
+export default httpsService

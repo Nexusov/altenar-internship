@@ -5,7 +5,7 @@ export interface IPost {
   id: string;
   status: PostStatuses;
   image: string;
-  name: string;
+  title: string;
   author: string;
   date: string;
 }
@@ -20,16 +20,8 @@ export const transformPost = (post: IPost) => {
     id: post.id,
     status: post.status || PostStatuses.Warning,
     image: post.image || DEFAULT_IMAGE_URL,
-    name: post.name || DEFAULT_NAME,
+    title: post.title || DEFAULT_NAME,
     author: post.author || DEFAULT_NAME,
     date: transformDateFormat(post.date)
   }
 }
-
-/* Письмо для Саши:
-
-  Хотел тут id чере crypto.randomUUID() делать, 
-  но тогда они отличались бы от id в json :( 
-
-  id: crypto.randomUUID() RIP
-*/
