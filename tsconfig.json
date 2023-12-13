@@ -12,7 +12,10 @@
     /* "allowImportingTsExtensions": true, */
     "module": "ESNext",
     "jsx": "react-jsx",
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
+    "lib": [
+      "DOM"
+    ]
   },
   "include": [
     "src/**/*",
