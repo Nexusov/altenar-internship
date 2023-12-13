@@ -23,6 +23,18 @@ const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength }
     setRemaining(maxLength - value.length)
   }, [value, maxLength])
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value;
+
+    if (type === InputTypes.Url) {
+      if (inputValue.includes("http") || inputValue === '') {
+        setValue(inputValue);
+      }
+    } else {
+      setValue(inputValue);
+    }
+  };
+
   const isError = value.length >= maxLength;
 
   return (
@@ -36,7 +48,7 @@ const Input: React.FC<IINputProps> = ({ placeholder, type, name, id, maxLength }
         id={id}
         maxLength={maxLength} 
         value={value}
-        onChange={(e) => setValue(e.target.value)} 
+        onChange={handleChange} 
         isError={isError}
       />
       <StyledCharCounter isError={isError}>{remaining}</StyledCharCounter>
