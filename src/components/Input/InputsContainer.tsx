@@ -2,7 +2,7 @@ import { StyledInputsContainer } from "styles/StyledComponents/InputsContainer";
 
 const InputsContainer = ({ children }) => {
   return (
-    <StyledInputsContainer className="form-block__inputs-container inputs-container">
+    <StyledInputsContainer>
       {children}
     </StyledInputsContainer>
   )

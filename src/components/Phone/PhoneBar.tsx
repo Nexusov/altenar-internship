@@ -6,10 +6,10 @@ import { StyledPhoneBar, StyledPhoneBarSVGGroup } from "styles/StyledComponents/
 const PhoneBar = () => {
   return (
     <StyledPhoneBar>
-        <StyledPhoneBarSVGGroup className="top-bar__item top-bar-time">
+        <StyledPhoneBarSVGGroup>
           <PhoneTimeIcon />
         </StyledPhoneBarSVGGroup>
-        <StyledPhoneBarSVGGroup className="top-bar__item top-bar-indicators">
+        <StyledPhoneBarSVGGroup>
           <PhoneWifiIcon />
           <PhoneBatteryIcon />
         </StyledPhoneBarSVGGroup>

@@ -6,7 +6,7 @@ const FileUploadForm = () => {
   return (
     <>
       <FormHeader>
-        <StyledFormTitle className="text-wrapper__item form-title">Загрузите обложку</StyledFormTitle>
+        <StyledFormTitle>Загрузите обложку</StyledFormTitle>
       </FormHeader>
       <DragnDrop />
     </>

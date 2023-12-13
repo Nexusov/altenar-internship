@@ -7,7 +7,7 @@ const PhoneDescription = () => {
   const { isToggled, color, phoneTitle, phoneDescription } = usePhone();
   
   return (
-    <StyledPhoneDescription color={color} className="phone__description-container description-container">
+    <StyledPhoneDescription color={color}>
       <StyledPhoneTitle isToggled={isToggled}>{phoneTitle || DEFAULT_POST_TITLE}</StyledPhoneTitle>
       <StyledPhoneText isToggled={isToggled}>{phoneDescription || DEFAULT_DESCRIPTION}</StyledPhoneText>
     </StyledPhoneDescription>

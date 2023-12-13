@@ -14,8 +14,8 @@ const AboutForm = () => {
   return (
     <>
       <FormHeader>
-        <StyledFormTitle className="text-wrapper__item form-title">Расскажите о подборке</StyledFormTitle>
-        <StyledText type={TextStyleTypes.Navigation} className="text-wrapper_item text--navigation">Желательно сделать это кратко и ёмко</StyledText>
+        <StyledFormTitle>Расскажите о подборке</StyledFormTitle>
+        <StyledText type={TextStyleTypes.Navigation}>Желательно сделать это кратко и ёмко</StyledText>
       </FormHeader>
       <InputsContainer>
         <Input placeholder="Дискриптор" type={InputTypes.Text} name="descriptor" id="descriptor" maxLength={30} />

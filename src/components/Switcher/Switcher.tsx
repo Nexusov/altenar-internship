@@ -6,7 +6,7 @@ const Switcher = () => {
   const { isToggled, toggleSwitch } = usePhone();
 
   return (
-    <StyledSwitcher className="switcher-container__item switcher">
+    <StyledSwitcher>
       <input type="checkbox" checked={isToggled} onChange={toggleSwitch}/>
       <span></span>
     </StyledSwitcher>

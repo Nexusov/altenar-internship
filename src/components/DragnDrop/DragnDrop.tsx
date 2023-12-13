@@ -23,7 +23,6 @@ const DragnDrop = () => {
 
   return (
     <StyledDragnDrop
-      className="form-block__drag-drop drag-drop"
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
@@ -41,7 +40,6 @@ const DragnDrop = () => {
       <input
         type="file"
         id="fileInput"
-        className="drag-drop__input"
         accept="image/*"
         onChange={handleFileInputChange}
         ref={fileInputRef}

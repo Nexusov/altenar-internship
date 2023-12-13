@@ -7,12 +7,12 @@ import { StyledTitle } from "styles/StyledComponents/Title";
 
 const Header = () => {
   return (
-    <StyledHeader className="header">
-      <StyledHeaderContent className="header__content">
-        <StyledHeaderSocial className="header__social">
-          <StyledHeaderTextContainer className="header__text">
-            <StyledTitle className="header__title title">Социальные сети</StyledTitle>
-            <StyledSubTitle className="header__subtitle subtitle">Делитесь постами из соцсетей</StyledSubTitle>
+    <StyledHeader>
+      <StyledHeaderContent>
+        <StyledHeaderSocial>
+          <StyledHeaderTextContainer>
+            <StyledTitle>Социальные сети</StyledTitle>
+            <StyledSubTitle>Делитесь постами из соцсетей</StyledSubTitle>
           </StyledHeaderTextContainer>
           <SocialList />
         </StyledHeaderSocial>

@@ -5,13 +5,13 @@ import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text";
 
 const PostPreview = ({ image, title, author }) => {
   return (
-    <StyledPostPreview className="post__preview">
-      <StyledPostImgContainer className="post__img-container">
+    <StyledPostPreview>
+      <StyledPostImgContainer>
         <Image type={ImageTypes.Post} src={image} alt="Post image" />
       </StyledPostImgContainer>
-      <StyledPostTextContainer className="post__text-container">
-        <StyledText type={TextStyleTypes.Primary} className="post__name text text--primary">{title}</StyledText>
-        <StyledText type={TextStyleTypes.Secondary} className="post__author text text--secondary">@{author}</StyledText>
+      <StyledPostTextContainer>
+        <StyledText type={TextStyleTypes.Primary}>{title}</StyledText>
+        <StyledText type={TextStyleTypes.Secondary}>@{author}</StyledText>
       </StyledPostTextContainer>
     </StyledPostPreview>
   )

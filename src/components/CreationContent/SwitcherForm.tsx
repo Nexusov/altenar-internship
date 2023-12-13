@@ -8,8 +8,8 @@ const SwitcherForm = () => {
   return (
     <>
       <FormHeader>
-        <StyledFormTitle className="text-wrapper__item form-title">Проверьте читабельность</StyledFormTitle>
-        <StyledText type={TextStyleTypes.Navigation} className="text-wrapper_item text--navigation">Выберите цвет интерфейса, который будет <br />
+        <StyledFormTitle>Проверьте читабельность</StyledFormTitle>
+        <StyledText type={TextStyleTypes.Navigation}>Выберите цвет интерфейса, который будет <br />
           контрастнее смотреться на выбранном ранее фоне
         </StyledText>
       </FormHeader>

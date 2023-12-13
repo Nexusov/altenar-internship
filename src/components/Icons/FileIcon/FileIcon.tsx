@@ -2,7 +2,7 @@ import { StyledFileIcon } from "styles/StyledComponents/FileIcon";
 
 const FileIcon = () => {
   return (
-    <StyledFileIcon className="drag-drop__icon">
+    <StyledFileIcon>
       <svg width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Material Outlined/Popular/ Documents and Folders /File" clipPath="url(#clip0_21_8392)">
           <path id="Vector"

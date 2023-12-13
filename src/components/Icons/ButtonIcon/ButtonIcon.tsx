@@ -2,7 +2,7 @@ import { StyledPlusIcon } from 'styles/StyledComponents/Link';
 
 const PlusIcon = () => {
   return (
-    <StyledPlusIcon className="btn_icon">
+    <StyledPlusIcon>
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="filled/content/add-circle-outline" clipPath="url(#clip0_1909_307)">
           <path id="Vector"

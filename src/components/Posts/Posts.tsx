@@ -28,7 +28,7 @@ const Posts = () => {
   }
 
   return (
-    <StyledPostsContainer className="main-content__posts posts">
+    <StyledPostsContainer>
       {posts.map(post => (
         <Post 
           key={post.id}

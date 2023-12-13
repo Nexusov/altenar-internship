@@ -13,7 +13,7 @@ const ShopLinkForm = () => {
   return (
     <>
       <FormHeader>
-        <StyledFormTitle className="text-wrapper__item form-title">Оставьте ссылку</StyledFormTitle>
+        <StyledFormTitle>Оставьте ссылку</StyledFormTitle>
         <StyledText type={TextStyleTypes.Navigation}>Лучше всего ссылаться на каталог вашего магазина или <br />
           промо-страницу</StyledText>
       </FormHeader>

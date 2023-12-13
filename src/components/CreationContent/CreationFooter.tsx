@@ -21,9 +21,9 @@ const CreationFooter = () => {
   }
 
   return (
-    <StyledFooter className="form-block__create-container create-container">
+    <StyledFooter>
       <Button text="Добавить" onClick={handlePostCreate} />
-      <StyledText type={TextStyleTypes.Secondary} className="create-container__text text--secondary">Подборка не будет опубликована. Вы сможете добавить <br />
+      <StyledText type={TextStyleTypes.Secondary}>Подборка не будет опубликована. Вы сможете добавить <br />
         продукты и внести правки</StyledText>
     </StyledFooter>
   )

@@ -4,10 +4,10 @@ import { StyledText, TextStyleTypes } from "styles/StyledComponents/Text";
 
 const SwitcherContainer = () => {
   return (
-    <StyledSwitcherContainer className="form-block__switcher-container switcher-container">
-      <StyledText type={TextStyleTypes.SwitcherDark} className="switcher-container__item text--switcher-dark ">Темный</StyledText>
+    <StyledSwitcherContainer>
+      <StyledText type={TextStyleTypes.SwitcherDark}>Темный</StyledText>
         <Switcher/>
-      <StyledText type={TextStyleTypes.SwitcherLight} className="switcher-container__item text--switcher-light">Светлый</StyledText>
+      <StyledText type={TextStyleTypes.SwitcherLight}>Светлый</StyledText>
     </StyledSwitcherContainer>
   )
 }

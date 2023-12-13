@@ -3,7 +3,7 @@ import { StyledPreviewSection } from "styles/StyledComponents/PreviewSection";
 
 const PreviewSection = () => {
   return (
-    <StyledPreviewSection className="main-content__item preview">
+    <StyledPreviewSection>
       <Phone />
     </StyledPreviewSection>
   )

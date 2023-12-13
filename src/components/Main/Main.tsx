@@ -5,8 +5,8 @@ import Posts from "components/Posts/Posts";
 
 const Main = () => {
   return (
-    <StyledMain className="main-content">
-      <StyledMainColumns className="main-content__columns">
+    <StyledMain>
+      <StyledMainColumns>
         <TableHeader />
         <Posts />
       </StyledMainColumns>

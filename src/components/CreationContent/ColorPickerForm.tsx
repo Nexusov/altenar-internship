@@ -8,8 +8,8 @@ const ColorPickerForm = () => {
   return (
     <>
       <FormHeader>
-        <StyledFormTitle className="text-wrapper__item form-title">Выберите цвет</StyledFormTitle>
-        <StyledText type={TextStyleTypes.Navigation} className="text-wrapper_item text--navigation">
+        <StyledFormTitle>Выберите цвет</StyledFormTitle>
+        <StyledText type={TextStyleTypes.Navigation}>
           Лучше всего подойдет цвет преобладающий на обложке
         </StyledText>
       </FormHeader>

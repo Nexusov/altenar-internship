@@ -12,7 +12,7 @@ const SocialList = () => {
   }
 
   return (
-    <StyledHeaderSocialList className="header__social-list">
+    <StyledHeaderSocialList>
       {socialNetworks.map(item => (
         <StyledHeaderSocialListItem
           key = {item}

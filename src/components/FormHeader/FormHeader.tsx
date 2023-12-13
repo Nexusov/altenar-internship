@@ -6,7 +6,7 @@ export interface IFormHeaderProps {
 
 const FormHeader: React.FC<IFormHeaderProps> = ({ children }) => {
   return (
-    <StyledFormTextWrapper className="form-block__header text-wrapper">
+    <StyledFormTextWrapper>
       {children}
     </StyledFormTextWrapper>
   )

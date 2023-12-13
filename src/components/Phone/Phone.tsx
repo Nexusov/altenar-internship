@@ -7,11 +7,11 @@ import { usePhone } from "./PhoneContext";
 const Phone = () => {
 
   const { imageUrl } = usePhone();
-  
+
   return (
-    <StyledPhone className="preview__phone phone">
+    <StyledPhone>
       <PhoneBar />
-      <StyledPhoneImage className="phone__image-container image-container">
+      <StyledPhoneImage>
         <Image type={ImageTypes.Preview} src={imageUrl} alt="Post image" />
       </StyledPhoneImage>
       <PhoneDescription />

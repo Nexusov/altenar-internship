@@ -6,7 +6,7 @@ import PreviewSection from "components/PreviewSection/PreviewSection";
 const MainCreation = () => {
   return (
     <>
-      <StyledCreationSection className="main-content__item add-form">
+      <StyledCreationSection>
         <MainCreationHeader />
         <CreationContent />
       </StyledCreationSection>

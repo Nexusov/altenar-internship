@@ -5,8 +5,8 @@ import NavArrowIcon from 'components/Icons/NavArrowIcon/NavArrowIcon';
 
 const FixedNavHeader = () => {
   return (
-    <StyledFixedNavHeader className="header">
-      <StyledFixedNavItems className="header__nav header-nav">
+    <StyledFixedNavHeader>
+      <StyledFixedNavItems>
         <HeaderNavLink src="/">
           <NavArrowIcon />
           <StyledText type={TextStyleTypes.Navigation}>Вернуться к списку</StyledText>

@@ -2,7 +2,7 @@ import { StyledCloseIcon } from "styles/StyledComponents/CloseIcon";
 
 const CloseIcon = ({ onClick }) => {
   return (
-    <StyledCloseIcon className="drag-drop__close-icon" onClick={onClick}>
+    <StyledCloseIcon onClick={onClick}>
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_24_8124)">
           <path

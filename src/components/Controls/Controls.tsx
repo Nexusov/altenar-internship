@@ -4,11 +4,11 @@ import DropDownMenu from 'components/DropDownMenu/DropDownMenu';
 
 const Controls = ({ handleDelete, onPublish, status }) => {
   return (
-    <StyledPostControlsContainer className="post__controls controls">
-      <StyledPostControlsItem className="controls__item controls__item--link">
+    <StyledPostControlsContainer>
+      <StyledPostControlsItem>
         <LinkIcon />
       </StyledPostControlsItem>
-      <StyledPostControlsItem className="controls__item controls__item--navigation">
+      <StyledPostControlsItem>
         <DropDownMenu handleDelete={handleDelete} onPublish={onPublish} status={status} />
       </StyledPostControlsItem>
     </StyledPostControlsContainer>

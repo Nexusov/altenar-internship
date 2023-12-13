@@ -30,7 +30,7 @@ const Post: React.FC<IPostProps> = ({ id, image, author, title, date, handleDele
   }
 
   return (
-    <StyledPost className="posts__item post">
+    <StyledPost>
       <PostPreview image={image} author={author} title={title} />
       <PostPublishInfo author={author} date={date} status={status}/>
       <Controls handleDelete={handleDelete} onPublish={handlePublish} status={status}/>

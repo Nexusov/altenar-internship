@@ -5,13 +5,13 @@ import { StyledTime } from 'styles/StyledComponents/Date';
 
 const PostPublishInfo = ({ author, date, status }) => {
   return (
-    <StyledPostPublishInfoContainer className="post__publish-info publish-info">
-      <StyledPostStatusesContainer className="publish-info__status-container status-container">
+    <StyledPostPublishInfoContainer>
+      <StyledPostStatusesContainer>
         <StatusIcon status={status}/>
       </StyledPostStatusesContainer>
-      <StyledPostPublishInfoTextContainer className="publish-info__text-container">
-        <StyledText type={TextStyleTypes.Primary} className="publish-info__author text--primary">{author}</StyledText>
-        <StyledTime dateTime={date} className="publish-info__date text--secondary">{date}</StyledTime>
+      <StyledPostPublishInfoTextContainer>
+        <StyledText type={TextStyleTypes.Primary}>{author}</StyledText>
+        <StyledTime dateTime={date}>{date}</StyledTime>
       </StyledPostPublishInfoTextContainer>
     </StyledPostPublishInfoContainer>
   )
