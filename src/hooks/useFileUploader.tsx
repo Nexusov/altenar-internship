@@ -8,6 +8,16 @@ const useFileUploader = () => {
   const { imageUrl, setImageUrl } = usePhone();
   const fileInputRef = useRef(null)
 
+  const convertToBase64 = (file: File, callback: (base64String: string) => void) => {
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      if (typeof reader.result === 'string') {
+        callback(reader.result);
+      }
+    }
+    reader.readAsDataURL(file)
+  }
+
   const handleReset = () => {
     setImageUrl(DEFAULT_IMAGE_URL);
     setStatus(DragnDropStatuses.Default);
@@ -40,23 +50,24 @@ const useFileUploader = () => {
     const file = files[0]
     if (!file) return
   
-    const url = URL.createObjectURL(file);
-    const img = new Image()
+    convertToBase64(file, (base64String) => {
 
-    img.onload = () => {
-      if (img.width === img.height && img.width >= 1242) {
-        setStatus(DragnDropStatuses.Loading)
-        console.log("File is loading:")
-        setImageUrl(url)
-        setStatus(DragnDropStatuses.Uploaded)
-        console.log("File has loaded:")
-      } else {
-        setStatus(DragnDropStatuses.Error)
-        console.error("Error loading image.")
-        URL.revokeObjectURL(url)
+      const img = new Image()
+
+      img.onload = () => {
+        if (img.width === img.height && img.width >= 1242) {
+          setStatus(DragnDropStatuses.Loading)
+          console.log("File is loading:")
+          setImageUrl(base64String)
+          setStatus(DragnDropStatuses.Uploaded)
+          console.log("File has loaded:")
+        } else {
+          setStatus(DragnDropStatuses.Error);
+          console.error("Error loading image.")
+        }
       }
-    }
-    img.src = url
+      img.src = base64String
+    })
   }
   
   return {

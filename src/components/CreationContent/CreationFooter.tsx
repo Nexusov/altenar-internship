@@ -13,7 +13,7 @@ const CreationFooter = () => {
 
   const handlePostCreate = async () => {
     try {
-      await createPost({shopName, shopLink, postDate: '', postStatus: '', postAuthor: '', postImgURL: '', isDark: isToggled, postColor: color, postTitle: phoneTitle, postDescription: phoneDescription})
+      await createPost({shopName, shopLink, postDate: '', postStatus: '', postAuthor: '', postImgURL: imageUrl, isDark: isToggled, postColor: color, postTitle: phoneTitle, postDescription: phoneDescription})
       navigate('/')
     } catch (error) {
       alert('Error creating post')
