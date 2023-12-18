@@ -1,22 +1,26 @@
 import Post from "./Post";
 import { deletePost, fetchPosts } from "services/postsService";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useTransition } from 'react';
 import { IPost, transformPost } from "utils/transformData";
 
 import { StyledPostsContainer } from "styles/StyledComponents/Posts";
+import Loader from "components/Loader/Loader";
 
 const Posts = () => {
   const [posts, setPosts] = useState<IPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const loadPosts = async () => {
-      const fetchedPosts = await fetchPosts();
-      const transformedPosts = fetchedPosts.map(transformPost);
-      setPosts(transformedPosts);
-    };
+      setIsLoading(true)
+      const fetchedPosts = await fetchPosts()
+      const transformedPosts = fetchedPosts.map(transformPost)
+      setPosts(transformedPosts)
+      setIsLoading(false)
+    }
 
-    loadPosts();
-  }, []);
+    loadPosts()
+  }, [])
 
   const handleDelete = async (postId: string) => {
     try {
@@ -29,6 +33,7 @@ const Posts = () => {
 
   return (
     <StyledPostsContainer>
+      {isLoading && <Loader />}
       {posts.map(post => (
         <Post 
           key={post.id}
